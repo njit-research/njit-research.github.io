@@ -17,6 +17,6 @@ Please note that you will need a github account to accept the invitation to join
 
 ## Github Pages
 
-You can use Github Pages to create a website for your repositories. The url will be https://njit-research.github.io/&lt;repo_name&gt;
+You can use Github Pages to create a website for your repositories. The url will be https://njit-research.github.io/&lt;reponamee&gt;
 
   
