@@ -1,4 +1,12 @@
 site_name: NJIT Github Enterprise Cloud
+
+nav:
+  - Home: index.md
+  - 'How To':
+    - 'how-to/index.md'
+    - 'Get Started': 'how-to/get-started.md'
+    - 'Join GEC': 'how-to/invite.md'
+    - 'Manage Teams': 'how-to/manage-teams.md'
 theme: 
   name: material
   logo: https://hpc.njit.edu/img/Logo_NJIT.png
@@ -42,14 +50,8 @@ theme:
 
 extra_css:
     - https://hpc.njit.edu/stylesheets/extra.css
-extra:
-  social:
-    - icon: material/help-box-multiple
-      link: https://nexus.njit.edu/highlander_nexus?id=sc_cat_item&sys_id=3f1dd0320a0a0b99000a53f7604a2ef9
-      name: Contact IST support
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:servicedesk@njit.edu
-      name: Email IST Service Desk
+    - stylesheets/extra.css
+
 
 # Extensions
 markdown_extensions:
@@ -95,9 +97,19 @@ plugins:
   - mkdocstrings
   - awesome-pages
   - autolinks
+  - macros
 #  - blog:
 #      blog_dir: news
 #      authors: false
 #      archive: false
+
+extra:
+  social:
+    - icon: material/help-box-multiple
+      link: https://nexus.njit.edu/highlander_nexus?id=sc_cat_item&sys_id=3f1dd0320a0a0b99000a53f7604a2ef9
+      name: Contact IST support
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:servicedesk@njit.edu
+      name: Email IST Service Desk
 
 copyright: Advanced Research Computing Services, New Jersey Institute of Technology

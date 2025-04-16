@@ -1,12 +1,11 @@
 ---
 hide:
   - toc
-  - navigation
 ---
 
-# NJIT's Github Org
+# NJIT's Github Enterprise Cloud
 
-In Spring 2025, NJIT subscribed to Github Enterprise Cloud. There are two organizations created for Research and Academics. The Research Org to be used for research purposes allowing team members to invite external collaborators to share private repositories. The Academic Org to be used for academic purposes i.e. course use is restricted to NJIT entities only.
+In Spring 2025, NJIT subscribed to Github Enterprise Cloud. There are two organizations created for use by NJIT Faculty and their collaborators. The Research Org to be used for research purposes allowing team members to invite external collaborators to share private repositories. The Academic Org to be used for academic purposes i.e. course use is restricted to NJIT entities only.
  
 
 ## Getting an account
