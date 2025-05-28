@@ -14,6 +14,6 @@ hide: toc
    ![alt_text](images/step3.png "image_tooltip") <br />
 5. Now you are ready to explore GitHub njit-academics or njit-research. <br />
    ![alt_text](images/step4.png "image_tooltip") <br />
-6. Note: **If you have an invite to both njit-academics and njit-research, you need to accept both invites (Step 4) to join NJIT's GEC Org. You do not need to create two github accounts to joi both orgs.**
+6. Note: **If you have an invite to both njit-academics and njit-research, you need to accept both invites (Step 4) to join NJIT's GEC Org. You do not need to create two github accounts to join both orgs.**
 
 
