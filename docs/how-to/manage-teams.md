@@ -23,18 +23,18 @@ hide: toc
 
 
 ??? question "Faculty: How do I add collaborators to my Team?"
-    __Adding collaborators to your team is self service once you have been promoted to a Team Maintainer. If you need ARCS to add your collaborators, please open a ServiceNow request with UCID's or github handles of your collaborators.__
+    __~~Adding collaborators to your team is self service once you have been promoted to a Team Maintainer. If you need ARCS to add your collaborators, please open a ServiceNow request with UCID's or github handles of your collaborators.~~__
 
-    1. Navigate to your Team by clicking the Teams tab on the Organization page.
-    2. Click on your name (Faculty) to enter your Team page.
-         a. Absolute path to your team in an org, for e.g. njit-research org is https://github.com/orgs/njit-research/teams/firstname-lastname (all lowercase)
-    3. Click the Green Button that says "Add a member" and add your collaborators github handle or njit email address to send an invite to join your team.
-    4. If you do not see the "Add a member" button, please email us to be promoted to a Team Maintainer.
+    1. ~~Navigate to your Team by clicking the Teams tab on the Organization page.~~
+    2. ~~Click on your name (Faculty) to enter your Team page.~~
+         a. ~~Absolute path to your team in an org, for e.g. njit-research org is https://github.com/orgs/njit-research/teams/firstname-lastname (all lowercase)~~
+    3. ~~Click the Green Button that says "Add a member" and add your collaborators github handle or njit email address to send an invite to join your team.~~
+    4. ~~If you do not see the "Add a member" button, please email us to be promoted to a Team Maintainer.~~
 
 ??? question "Student: How do I get added to a Team?"
     * Ask your facutly advisor or course instructor to add you to their team or sub team.
     * ARCS will only honor requests from faculty to add students to their team or sub teams. __Requests from students to join a team or sub team will be denied__. 
-    * Faculty, please note that adding collaborators to your team or sub team is self service. We are happy to do this but you might want to manage your team i.e. add or remove collaborators.
+    * ~~Faculty, please note that adding collaborators to your team or sub team is self service. We are happy to do this but you might want to manage your team i.e. add or remove collaborators.~~
 
 
  
