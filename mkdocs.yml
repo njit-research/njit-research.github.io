@@ -7,6 +7,7 @@ nav:
     - 'Get Started': 'how-to/get-started.md'
     - 'Join GEC': 'how-to/invite.md'
     - 'Manage Teams': 'how-to/manage-teams.md'
+    - 'Gitlab 2 Github Migration': 'how-to/migrate.md'
 theme: 
   name: material
   logo: https://hpc.njit.edu/img/Logo_NJIT.png

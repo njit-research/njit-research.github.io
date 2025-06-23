@@ -11,5 +11,7 @@ hide: toc
 
 ## [Manage Teams](manage-teams.md)
 
+## [Migrate repos from on prem gitlab servers](migrate.md)
+
 
  
