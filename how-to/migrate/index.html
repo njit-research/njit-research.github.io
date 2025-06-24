@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#requirements" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -351,6 +356,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gitlab 2 Github Migration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -360,6 +376,56 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -393,6 +459,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migration steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#known-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Known Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -408,20 +515,25 @@
 
   <h1>Gitlab 2 Github Migration</h1>
 
-<p>The following instructions were developed for migrating repositories with their issues, merge requests, milestones and notes (i.e. issue and merge request comments) from self managed on premise gitlab server for academic use to  github enterprise cloud, njit-academics organization. It should work for migration from other gitlab servers to other github organizations.</p>
-<p>Requirements:</p>
+<p>The following instructions were developed for migrating repositories with their issues, merge requests, milestones and notes (i.e. issue and merge request comments) from self managed on premise gitlab server for academic use to  github enterprise cloud, njit-academics organization, on Mac OSX 15.5. It has also been tested on a Ubuntu 24.04 LTS virtual image. It should work for migration from other gitlab servers to other github organizations on other OS's.</p>
+<h2 id="requirements">Requirements:<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Personal Access Tokens for <a href="https://docs.gitlab.com/user/profile/personal_access_tokens/">gitlab</a> and <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">github</a> </p>
 </li>
 <li>
-<p><a href="https://cli.github.com/">Github CLI</a></p>
+<p><a href="https://cli.github.com/">Github CLI</a>
+<div class="highlight"><pre><span></span><code>Mac:<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>gh
+Linux:<span class="w"> </span>See<span class="w"> </span>instructions<span class="w"> </span>at<span class="w"> </span>https://github.com/cli/cli/blob/trunk/docs/install_linux.md<span class="w"> </span>
+</code></pre></div></p>
 </li>
 <li>
-<p>Python 3, python-gitlab and python-csv</p>
+<p>Python 3, python-gitlab and python-csv
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>python-gitlab<span class="w"> </span>python-csv
+</code></pre></div></p>
 </li>
 </ol>
-<p>Migration steps</p>
+<h2 id="migration-steps">Migration steps<a class="headerlink" href="#migration-steps" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>Download the <a href="../scripts/export_all_gitlab_repos.py">python</a> and <a href="../scripts/import_to_github.sh">bash</a> script.</p>
@@ -431,32 +543,31 @@
 <p>Extract all gitlab repo data that you have access to
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>export_all_gitlab_repos.py<span class="w"> </span>--token<span class="w"> </span><span class="s2">&quot;gitlab token&quot;</span>
 </code></pre></div></p>
+<ul>
+<li>By default, this extracts data from <a href="http://git-acad.njit.edu">http://git-acad.njit.edu</a>. If you want to extract data from another site, say <a href="https://gitlab.com">https://gitlab.com</a>, then add <code>--url https://gitlab.com</code></li>
+</ul>
 </li>
 <li>
 <p>Import repository to your github team
 <div class="highlight"><pre><span></span><code>bash<span class="w"> </span>import_to_github.sh<span class="w"> </span><span class="s2">&quot;your team name&quot;</span>
 </code></pre></div></p>
-</li>
-<li>
-<p>If you encounter errors in 3 with the github cli command, then </p>
-</li>
-<li>
-<p>comment lines 11 and 12 in the <code>import_to_github script</code></p>
-</li>
-<li>
-<p>authenticate from the terminal by running
-<div class="highlight"><pre><span></span><code>gh<span class="w"> </span>auth<span class="w"> </span>login
-</code></pre></div></p>
-</li>
-<li>
-<p>Optional: check is the gh command works
-<div class="highlight"><pre><span></span><code>gh<span class="w"> </span>repo<span class="w"> </span>list<span class="w"> </span>njit-academics
-</code></pre></div></p>
-</li>
-<li>
-<p>run <code>bash import_to_github.sh "your team name"</code></p>
+<ul>
+<li>To find "your team name", you can run the command 
+<div class="highlight"><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Accept: application/vnd.github+json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;X-GitHub-Api-Version: 2022-11-28&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>/orgs/njit-academics/teams<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>jq<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;[.[] | {name: .name, path: .slug, description: .description}]&#39;</span>
+</code></pre></div>
+     and use the path output in the previous command.</li>
+</ul>
 </li>
 </ul>
+<h3 id="known-issues">Known Issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h3>
+<ol>
+<li>If your repo on gitlab uses LFS, the <code>git push --mirror</code> command in the <code>import_to_github.sh</code> script will fail. You might need to clone the repo and track large files with lfs before pushing to github.</li>
+<li>Issues, merge requests, milestones etc will be under your gitlab account i.e. njit ucid not your github handle.</li>
+</ol>
 
 
 
