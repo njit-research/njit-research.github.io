@@ -35,7 +35,8 @@ In your terminal, authenticate Apptainer with GHCR.
 apptainer remote login --username YOUR_GITHUB_USERNAME ghcr.io
 ```
 when prompted enter your PAT and not github password
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Apptainer Workflow Guide
 
