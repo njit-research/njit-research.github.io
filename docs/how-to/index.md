@@ -13,5 +13,7 @@ hide: toc
 
 ## [Migrate repos from on prem gitlab servers](migrate.md)
 
+## [USE Apptainer-with-github-container-registry](using-apptainer-with-ghcr.md)
+
 
  
