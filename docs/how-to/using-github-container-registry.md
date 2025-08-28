@@ -6,8 +6,7 @@ This approach uses GHCR as our central, private registry, avoiding the need for 
 
 ## Prerequisites
 
-- **On your local machine:** Docker Desktop (or another Docker-compatible environment) installed.
-- **On the cluster:** Access to Apptainer (or Singularity).
+- **On your local machine:** Docker container runtume installed.
 - A GitHub account with membership in the `njit-academics` organization.
 - A `Dockerfile` for your application.
 
@@ -57,70 +56,49 @@ From the directory containing your Dockerfile, build your image as you normally 
 # This creates an image with the local name 'my-app'
 docker build -t my-app .
 ```
+### 2.2 Creating Repository
+You will need to create a repository for storing your container images on github.
+1. Go to the NJIT-Github organization
+2. Scroll down and find repositories and click on New.
+3. Make sure the owner is NJIT organization, choose visibility and click create.
+4. Create the repository with the following convention your-UCID-Images, replace your UCID with your ID.
 
-### 2.2 Tag the Image for GHCR
+
+
+### 2.3 Tag the Image for GHCR
 
 Docker needs to know where you intend to push the image. You do this by creating a new tag that includes the registry's address and your organization's path.
+We will use our newly created repository to store the container images.
 
 ```bash
 # Syntax: docker tag LOCAL_IMAGE_NAME ghcr.io/ORGANIZATION/REPOSITORY/IMAGE_NAME:TAG
-docker tag my-app ghcr.io/njit-academics/container-images/my-app:1.0
+docker tag my-app ghcr.io/njit-academics/YourRepositoryName/my-app:1.0
 ```
 
 - `my-app`: The local name of the image you just built.
-- `ghcr.io/njit-academics/container-images/my-app:1.0`: The full path on GHCR where the image will be stored. You can change `my-app` and the `1.0` version tag as needed.
+- `ghcr.io/njit-academics/YourRepositoryName/my-app:1.0`: The full path on GHCR where the image will be stored. You can change `my-app` and the `1.0` version tag as needed.
 
-### 2.3 Push the Image to GHCR
+### 2.4 Push the Image to GHCR
 
 Now, push the newly tagged image to the registry.
 
 ```bash
-docker push ghcr.io/njit-academics/container-images/my-app:1.0
+docker push ghcr.io/njit-academics/YourRepositoryName/my-app:1.0
 ```
 
 Your Docker image is now stored securely on GHCR.
 
----
-
-## Part 3: Using the Image on the Cluster with Apptainer
-
-Once the image is in GHCR, anyone with read access can pull it onto a cluster (like Wulver) using Apptainer.
-
-1. **Log in to the cluster.**
-
-2. **Authenticate Apptainer** (if not done already): You will need to perform the same PAT/SSO authentication for Apptainer on the cluster as you did for Docker locally.
-
-   ```bash
-   # On the cluster, run this once:
-   apptainer remote login --username YOUR_GITHUB_USERNAME ghcr.io
-   # Paste your PAT when prompted for a password.
-   ```
-
-3. **Pull the image**: Use `apptainer build` to pull the Docker image from GHCR and convert it into a single Apptainer (.sif) file.
-
-   ```bash
-   # Apptainer uses the docker:// prefix to fetch from OCI registries
-   apptainer build my-app.sif docker://ghcr.io/njit-academics/container-images/my-app:1.0
-   ```
-
-4. **Run your container**: You can now run your application using the generated `my-app.sif` file.
-
-   ```bash
-   ./my-app.sif
-   # Or
-   apptainer exec my-app.sif <your-command>
-   ```
-
----
-
-## Alternative: Pushing an Existing Apptainer (SIF) Image
-
-If you built your image directly with Apptainer (using a `.def` file) instead of Docker, you can push the `.sif` file using the `oras://` prefix.
-
+### 2.5 Verify Your Image on GHCR
+You can try to pull the image by its tag to confirm it exists and is accessible.
+# Example: Pulling by tag
 ```bash
-# Ensure you are logged in with Apptainer first
-apptainer remote login ghcr.io
-
-# Push the SIF file
-apptainer push my-app.sif oras://ghcr.io/njit-academics/container-images/my-app:1.0
+docker pull ghcr.io/njit-academics/YourRepositoryName/my-app:1.0
 ```
+
+The pull operation should succeed, indicating the image is available. You can also compare the digest shown during the push or on GHCR with the digest of the pulled image.
+
+
+
+
+
+---
