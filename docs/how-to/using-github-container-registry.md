@@ -1,6 +1,6 @@
-# How to Push Docker Images to GHCR and Use with Apptainer
+# How to Push Docker Images to GitHub container-registry
 
-This guide provides the standard workflow for container usage at NJIT: building a **Docker image** on your local system, pushing it to the GitHub Container Registry (GHCR), and then pulling it with Apptainer for use on a cluster environment like Wulver.
+This guide provides the standard workflow for container usage at NJIT: building a **Docker image** on your local system, pushing it to the GitHub Container Registry (GHCR).
 
 This approach uses GHCR as our central, private registry, avoiding the need for Docker Hub.
 
