@@ -13,5 +13,7 @@ hide: toc
 
 ## [Migrate repos from on prem gitlab servers](migrate.md)
 
+## [Uing Github Container Registry (ghcr) for docker images](using-github-container-registry.md)
+
 
  
