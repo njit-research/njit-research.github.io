@@ -37,6 +37,7 @@ tail -n +2 repos.csv | while IFS='|' read -r id name path http_url; do
   git clone --mirror "$repo_url"
   cd "$repo_name.git" || continue
   git remote add github "git@github.com:$full_repo.git"
+#  git remote add github "https://github.com/$full_repo.git"
   git push --mirror github
   cd ..
   rm -rf "$repo_name.git"

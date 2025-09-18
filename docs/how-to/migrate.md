@@ -20,6 +20,18 @@ Linux: See instructions at https://github.com/cli/cli/blob/trunk/docs/install_li
 python3 -m pip install python-gitlab python-csv
 ```
 
+4. JSON processor, `jq`
+```bash
+Mac: brew install jq
+Ubuntu: apt install jq
+Fedora: dnf install jq
+openSuSE: zypper install jq
+More information: Visit https://jqlang.org/download/
+```
+
+5. Optional: Consider setting up [Connecting to Github with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh). If you haven't or prefer not to, see note in migration step below.
+
+
 ## Migration steps
 
 * Download the [python](scripts/export_all_gitlab_repos.py) and [bash](scripts/import_to_github.sh) script.
@@ -36,6 +48,7 @@ python3 export_all_gitlab_repos.py --token "gitlab token"
 ```bash
 bash import_to_github.sh "your team name"
 ```
+     - **NOTE: If you do not plan on using ssh keys, comment out line 39 and uncomment line 40. You will be prompted for your github username and password. Enter your Github Personal Access Token from step 1 above for password.**
      - To find "your team name", you can run the command 
 ```bash
 gh api \

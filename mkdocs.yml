@@ -8,9 +8,10 @@ nav:
     - 'Join GEC': 'how-to/invite.md'
     - 'Manage Teams': 'how-to/manage-teams.md'
     - 'Gitlab 2 Github Migration': 'how-to/migrate.md'
+    - 'Github Container Registry': 'how-to/using-github-container-registry.md'
 theme: 
   name: material
-  logo: https://hpc.njit.edu/img/Logo_NJIT.png
+  eogo: https://hpc.njit.edu/img/Logo_NJIT.png
   favicon: https://hpc.njit.edu/favicon.ico
   palette:
 
