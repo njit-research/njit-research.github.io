@@ -12,6 +12,8 @@
         <link rel="prev" href="../manage-teams/">
       
       
+        <link rel="next" href="../using-github-container-registry/">
+      
       
       <link rel="icon" href="https://hpc.njit.edu/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
@@ -94,7 +96,8 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="NJIT Github Enterprise Cloud" class="md-header__button md-logo" aria-label="NJIT Github Enterprise Cloud" data-md-component="logo">
       
-  <img src="https://hpc.njit.edu/img/Logo_NJIT.png" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -190,7 +193,8 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="NJIT Github Enterprise Cloud" class="md-nav__button md-logo" aria-label="NJIT Github Enterprise Cloud" data-md-component="logo">
       
-  <img src="https://hpc.njit.edu/img/Logo_NJIT.png" alt="logo">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     NJIT Github Enterprise Cloud
@@ -231,6 +235,8 @@
       
         
           
+        
+      
         
       
         
@@ -432,6 +438,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-github-container-registry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github Container Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -532,6 +559,18 @@ Linux:<span class="w"> </span>See<span class="w"> </span>instructions<span class
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>python-gitlab<span class="w"> </span>python-csv
 </code></pre></div></p>
 </li>
+<li>
+<p>JSON processor, <code>jq</code>
+<div class="highlight"><pre><span></span><code>Mac:<span class="w"> </span>brew<span class="w"> </span>install<span class="w"> </span>jq
+Ubuntu:<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>jq
+Fedora:<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>jq
+openSuSE:<span class="w"> </span>zypper<span class="w"> </span>install<span class="w"> </span>jq
+More<span class="w"> </span>information:<span class="w"> </span>Visit<span class="w"> </span>https://jqlang.org/download/
+</code></pre></div></p>
+</li>
+<li>
+<p>Optional: Consider setting up <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to Github with SSH</a>. If you haven't or prefer not to, see note in migration step below.</p>
+</li>
 </ol>
 <h2 id="migration-steps">Migration steps<a class="headerlink" href="#migration-steps" title="Permanent link">&para;</a></h2>
 <ul>
@@ -552,6 +591,7 @@ Linux:<span class="w"> </span>See<span class="w"> </span>instructions<span class
 <div class="highlight"><pre><span></span><code>bash<span class="w"> </span>import_to_github.sh<span class="w"> </span><span class="s2">&quot;your team name&quot;</span>
 </code></pre></div></p>
 <ul>
+<li><strong>NOTE: If you do not plan on using ssh keys, comment out line 39 and uncomment line 40. You will be prompted for your github username and password. Enter your Github Personal Access Token from step 1 above for password.</strong></li>
 <li>To find "your team name", you can run the command 
 <div class="highlight"><pre><span></span><code>gh<span class="w"> </span>api<span class="w"> </span><span class="se">\</span>
 <span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Accept: application/vnd.github+json&quot;</span><span class="w"> </span><span class="se">\</span>
