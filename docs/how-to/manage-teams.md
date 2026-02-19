@@ -23,18 +23,19 @@ hide: toc
 
 
 ??? question "Faculty: How do I add collaborators to my Team?"
-    __~~Adding collaborators to your team is self service once you have been promoted to a Team Maintainer. If you need ARCS to add your collaborators, please open a ServiceNow request with UCID's or github handles of your collaborators.~~__
+    Faculty can add students who are not members of the NJIT Github Organization to their team by submitting a form at [Highlander Nexus](https://njit.service-now.com/highlander_nexus?id=sc_cat_item&table=sc_cat_item&sys_id=0cd444012b69ae10a904fa08b891bf77&searchTerm=github). The system will send an invite to the students that expires after 7 days. If your students do not accept the invite before it expires, please complete the form again. IST staff cannot assist with github accounts if your students ignore invitation emails. 
 
-    1. ~~Navigate to your Team by clicking the Teams tab on the Organization page.~~
-    2. ~~Click on your name (Faculty) to enter your Team page.~~
-         a. ~~Absolute path to your team in an org, for e.g. njit-research org is https://github.com/orgs/njit-research/teams/firstname-lastname (all lowercase)~~
-    3. ~~Click the Green Button that says "Add a member" and add your collaborators github handle or njit email address to send an invite to join your team.~~
-    4. ~~If you do not see the "Add a member" button, please email us to be promoted to a Team Maintainer.~~
+    To add existing organization members to your team or sub-team
+
+    1. Navigate to your Team by clicking the Teams tab on the Organization page.
+    2. Click on your name (Faculty) to enter your Team page.
+
+         a. Absolute path to your team in an org, for e.g. njit-research org is https://github.com/orgs/njit-research/teams/firstname-lastname (all lowercase)
+    3. Click the Green Button that says "Add a member" and add your collaborators github handle or njit email address to send an invite to join your team.
+    4. If you do not see the "Add a member" button, please email us to be promoted to a Team Maintainer.
 
 ??? question "Student: How do I get added to a Team?"
     * Ask your facutly advisor or course instructor to add you to their team or sub team.
-    * ARCS will only honor requests from faculty to add students to their team or sub teams. __Requests from students to join a team or sub team will be denied__. 
-    * ~~Faculty, please note that adding collaborators to your team or sub team is self service. We are happy to do this but you might want to manage your team i.e. add or remove collaborators.~~
-
+    * ARCS cannot help you if you ignore the invitation email or do not follow instructions provided [here](invite.md)
 
  

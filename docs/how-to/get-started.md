@@ -4,12 +4,14 @@ hide: toc
 ---
 
 ??? question "How do I get access to NJIT's Github Enterprise Cloud?"
-    * Faculty can request a Team in our research or academic org by sending a [service now request](https://njit.service-now.com/highlander_nexus?id=sc_cat_item&table=sc_cat_item&sys_id=0cd444012b69ae10a904fa08b891bf77&searchTerm=github).
+    * Faculty can request a Team in our research or academic org by submitting a form at [Highlander Nexus](https://njit.service-now.com/highlander_nexus?id=sc_cat_item&table=sc_cat_item&sys_id=0cd444012b69ae10a904fa08b891bf77&searchTerm=github).
          * If you use Github for research and teaching, you need to request access to both orgs. An account on one org does not grant access to the other org.
-         * Once your request has been approved, you will receive a invite to join the org. After you have accepted the invite, you will be promoted to Team Maintainer to enable you to create sub teams and invite collaborators.
+         * Once your request has been approved, you will receive a invite to join the org.
+         * If you have requested accounts for students, then the students will also receive an invite. 
+         * After you have accepted the invite, you will be promoted to Team Maintainer to enable you to create sub teams and add existing organization members as collaborators.
+         * **Github Invitations expire after 7 days.** If an invite is not accepted before it expires, please fill out the form again. 
     * If you are a student or researcher, your research/faculty advisor can add you to their Team. Please ask your advisor to request a Team in our org if they do not have one.
     * You need to have a Github personal account with your NJIT email as a primary or alternate email. 
-    * __ARCS will send an invite to your ucid@njit.edu email only__.
     * Your team name will be your __FirstName LastName__ so that we can identify the team owner. If you want a different name, please feel free to create a sub-team with your preferred name and add collobarator to the sub-team rather than your top level team.
     * __Requests to create a top level team with a different name will be denied__.
 
