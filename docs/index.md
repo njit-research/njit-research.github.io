@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# NJIT's Github Enterprise Cloud
+# Github Enterprise Cloud
 
 In Spring 2025, NJIT subscribed to Github Enterprise Cloud. There are two organizations created for use by NJIT Faculty and their collaborators. The Research Org to be used for research purposes allowing team members to invite external collaborators to share private repositories. The Academic Org to be used for academic purposes i.e. course use is restricted to NJIT entities only.
  
@@ -17,9 +17,9 @@ Please note that you will need a github account to accept the invitation to join
 
 ## Github Pages
 
-You can use Github Pages to create a website for your repositories. The url for the Research Org will be https://njit-research.github.io/&lt;repository name&gt; while the Academic Org will be https://njit-academics.github.io/&lt;repository name&gt;
+You can use Github Pages to create a website for your repositories. The url for the Research Org will be https://sites.njit.edu/&lt;repository name&gt; while the Academic Org will be https://njit-academics.github.io/&lt;repository name&gt;
 
-If you plan on using Github pages for your web presence, please use your UCID as the reponame so that your site can be displayed at https://njit-research.github.io/&lt;UCID&gt;
+If you plan on using Github pages for your web presence, please use your UCID as the reponame so that your site can be displayed at https://sites.njit.edu/&lt;UCID&gt;
 
 
 ## Github Enterprise Organization Roles
