@@ -74,3 +74,17 @@ md-typeset .admonition.question,
   vertical-align: -0.4em;
 }
 
+.org-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.node foreignObject {
+    width: 300px !important;
+}
+
+

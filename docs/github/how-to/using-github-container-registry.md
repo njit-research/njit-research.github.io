@@ -1,3 +1,8 @@
+---
+title: Github Container Registry for docker images
+hide: toc
+---
+
 # How to Push Docker Images to GitHub container-registry
 
 This guide provides the standard workflow for container usage at NJIT: building a **Docker image** on your local system, pushing it to the GitHub Container Registry (GHCR).
@@ -12,7 +17,7 @@ This approach uses GHCR as our central, private registry, avoiding the need for 
 
 ---
 
-## Part 1: Authentication on Your Local Machine
+## 1: Authentication on Your Local Machine
 
 Before you can push an image, you must authenticate your local Docker client with GHCR. This requires a Personal Access Token (PAT) authorized for Single Sign-On (SSO).
 
@@ -44,7 +49,7 @@ You should see a "Login Succeeded" message. Your local machine is now ready to p
 
 ---
 
-## Part 2: Building, Tagging, and Pushing Your Docker Image
+## 2: Building, Tagging, and Pushing Your Docker Image
 
 This is the core workflow for getting your local container to the registry.
 

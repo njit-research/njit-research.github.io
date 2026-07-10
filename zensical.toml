@@ -11,7 +11,7 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "Github Enterprise Cloud"
+site_name = "Advanced Research Computing Services | New Jersey Institute of Technology"
 repo_name = "njit-research/njit-research.github.io"
 
 # The site_description is included in the HTML head and should contain a
@@ -47,13 +47,16 @@ Copyright &copy; 2026 Advanced Research Computing Services
 # Read more: https://zensical.org/docs/setup/navigation/
  nav = [
    { "Home" = "index.md" },
-   { "How To" = [
-       "how-to/index.md",
-       "how-to/get-started.md",
-       "how-to/invite.md",
-       "how-to/manage-teams.md",
-       "how-to/migrate.md",
-       "how-to/using-github-container-registry.md"
+   { "Staff" = "about.md"},
+   { "Github" = [
+       {"Overview" = "github/index.md"},
+       { "How To" = [
+           {"Get Started" = "github/how-to/get-started.md"},
+           {"Invite" = "github/how-to/invite.md"},
+           {"Manage Teams" = "github/how-to/manage-teams.md"},
+           {"Migration" = "github/how-to/migrate.md"},
+           {"Github Container Registry" = "github/how-to/using-github-container-registry.md"}
+       ]},
    ]},
  ]
 
@@ -226,7 +229,7 @@ features = [
     # below the header for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
     # Uncommenting
-    #"navigation.tabs",
+    "navigation.tabs",
 
     # When sticky tabs are enabled, navigation tabs will lock below the header
     # and always remain visible when scrolling down.

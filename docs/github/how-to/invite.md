@@ -3,7 +3,7 @@ title: Join NJIT's GEC using the Github Invite
 hide: toc
 ---
 
-### I received an invite, what do I do next to join NJIT's Github Enterprise Cloud?
+## I received an invite, what do I do next to join NJIT's Github Enterprise Cloud?
 
 1. If you have a Github account, skip to step 2. If you don’t have a GitHub account, please Sign up for a Github account (you can use your personal email or use ucid@njit.edu) by visiting https://github.com/signup: <br />
    ![alt_text](images/step1.png "image_tooltip") <br />

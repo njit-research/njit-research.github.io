@@ -2,6 +2,7 @@ site_name: NJIT Github Enterprise Cloud
 
 nav:
   - Home: index.md
+  - Github: github.com
   - 'How To':
     - 'how-to/index.md'
     - 'Get Started': 'how-to/get-started.md'
