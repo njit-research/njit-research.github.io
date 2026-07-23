@@ -28,7 +28,7 @@ site_author = "Advanced Research Computing Services"
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.example.com/"
+site_url = "https://sites.njit.edu"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
@@ -319,9 +319,15 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/njit-research/njit-research.github.io"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/njit-research/njit-research.github.io"
+name = "Github Repo"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/sitemap"
+link = "/sitemap.xml"
+name = "Sitemap"
 
 # ----------------------------------------------------------------------------
 # In this section you can configure the Markdown extensions that are used when
